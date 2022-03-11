@@ -20,8 +20,11 @@
       <property name="styleSheet">
        <string notr="true">color:white;
 background-color:black;
-font: italic 20pt &quot;Karumbi&quot;;
+font: 700 16pt &quot;Ubuntu Mono&quot;;
 </string>
+      </property>
+      <property name="placeholderText">
+       <string>Edit text out here...!</string>
       </property>
      </widget>
     </item>
