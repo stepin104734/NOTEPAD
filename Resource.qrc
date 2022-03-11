@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/Icon's">
+        <file>Resource/icons/about.jpeg</file>
+        <file>Resource/icons/copy.png</file>
+        <file>Resource/icons/NewFile.png</file>
+        <file>Resource/icons/notepad.jpeg</file>
+        <file>Resource/icons/open.jpeg</file>
+        <file>Resource/icons/paste.png</file>
+        <file>Resource/icons/redo.png</file>
+        <file>Resource/icons/SaveAs.jpeg</file>
+        <file>Resource/icons/SaveFile.png</file>
+        <file>Resource/icons/undo.png</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+</RCC>
