@@ -1,8 +1,11 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "string"
+#include "QFile"
+#include "QFileDialog"
+#include "QTextStream"
 #include "QDebug"
 #include "QMessageBox"
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,8 +13,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit_Notepad);
-
+     this->setWindowTitle("Notepad-Madhu");
+    this->showMaximized();
 }
+
+
 
 MainWindow::~MainWindow()
 {
@@ -75,6 +81,13 @@ void MainWindow::on_actionRedo_triggered()
 
 void MainWindow::on_actionAbout_Notepad_triggered()
 {
-    QMessageBox::information(this, "About", "A Simple notepad application as QT beginner");
+    QMessageBox::about(this, "About", " A Simple notepad application as QT beginner\n Date: 11/03/2022\n Version: 1.0");
+}
+
+
+void MainWindow::on_actionNew_triggered()
+{
+    QMessageBox::warning(this,"New file is being opened", "Please save file opening new File");
+   // QString file_path = getOpenFileName(this);
 }
 

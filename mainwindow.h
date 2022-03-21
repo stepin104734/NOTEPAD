@@ -15,6 +15,27 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_actionOpen_triggered();
+
+    void on_actionOpen_2_triggered();
+
+    void on_actionSave_triggered();
+
+    void on_actionSave_As_triggered();
+
+    void on_actionCopy_triggered();
+
+    void on_actionPase_triggered();
+
+    void on_actionUndo_triggered();
+
+    void on_actionRedo_triggered();
+
+    void on_actionAbout_Notepad_triggered();
+
+    void on_actionNew_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

@@ -24,7 +24,7 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
 </string>
       </property>
       <property name="placeholderText">
-       <string>Edit text out here...!</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -45,7 +45,7 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
     </property>
     <addaction name="actionOpen"/>
     <addaction name="separator"/>
-    <addaction name="actionOpen_2"/>
+    <addaction name="actionNew"/>
     <addaction name="separator"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_As"/>
@@ -82,7 +82,7 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
     <bool>false</bool>
    </attribute>
    <addaction name="actionOpen"/>
-   <addaction name="actionOpen_2"/>
+   <addaction name="actionNew"/>
    <addaction name="actionSave"/>
    <addaction name="actionSave_As"/>
    <addaction name="separator"/>
@@ -102,7 +102,7 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
     <string>New</string>
    </property>
   </action>
-  <action name="actionOpen_2">
+  <action name="actionNew">
    <property name="icon">
     <iconset resource="Resource.qrc">
      <normaloff>:/Icon's/Resource/icons/open.jpeg</normaloff>:/Icon's/Resource/icons/open.jpeg</iconset>
