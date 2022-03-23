@@ -10,6 +10,8 @@
         <file>Resource/icons/SaveAs.jpeg</file>
         <file>Resource/icons/SaveFile.png</file>
         <file>Resource/icons/undo.png</file>
+        <file>Resource/icons/logout.png</file>
+        <file>Resource/icons/Exit.jpeg</file>
     </qresource>
     <qresource prefix="/new/prefix1"/>
 </RCC>

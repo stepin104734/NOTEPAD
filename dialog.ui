@@ -10,6 +10,12 @@
     <height>275</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
@@ -17,7 +23,7 @@
    <string notr="true">background-color:white;
 </string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>70</x>
@@ -27,10 +33,16 @@
     </rect>
    </property>
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>219</width>
+     <height>93</height>
+    </size>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -38,13 +50,19 @@
       <item>
        <widget class="QLabel" name="label">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="maximumSize">
+         <size>
+          <width>69</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="styleSheet">
-         <string notr="true">background-color:blue;
+         <string notr="true">background-color:Green;
 color:white;
 </string>
         </property>
@@ -56,15 +74,24 @@ color:white;
       <item>
        <widget class="QLineEdit" name="lineEdit_uname">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>140</width>
+          <height>25</height>
+         </size>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:white;
 color:black;
 </string>
+        </property>
+        <property name="placeholderText">
+         <string>enter username</string>
         </property>
        </widget>
       </item>
@@ -75,14 +102,21 @@ color:black;
       <item>
        <widget class="QLabel" name="label_2">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="maximumSize">
+         <size>
+          <width>69</width>
+          <height>25</height>
+         </size>
+        </property>
         <property name="styleSheet">
-         <string notr="true">background-color:blue;
+         <string notr="true">background-color:green;
 color:white;
+
 </string>
         </property>
         <property name="text">
@@ -93,30 +127,50 @@ color:white;
       <item>
        <widget class="QLineEdit" name="lineEdit__pswd">
         <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>140</width>
+          <height>25</height>
+         </size>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color:white;
 color:black;</string>
         </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>enter password</string>
+        </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item>
+    <item alignment="Qt::AlignVCenter">
      <widget class="QPushButton" name="pushButton">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
       </property>
+      <property name="maximumSize">
+       <size>
+        <width>217</width>
+        <height>25</height>
+       </size>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color:green;
 color:white;
+border: 1px solid green;
+border-color:15px;
 </string>
       </property>
       <property name="text">

@@ -3,6 +3,8 @@
 #include "mainwindow.h"
 #include "QString"
 #include "QMessageBox"
+
+static int attempt=0;
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog)
@@ -14,10 +16,11 @@ Dialog::~Dialog()
 {
     delete ui;
 }
-
+QString uname = "madhu";
 void Dialog::on_pushButton_clicked()
 {
-    QString uname = "madhu";
+    if(attempt<3)
+    {
     QString pswd = "madhu";
     if(ui->lineEdit__pswd->text() == pswd && ui->lineEdit_uname->text()==uname){
     MainWindow *w=new MainWindow;
@@ -27,7 +30,12 @@ void Dialog::on_pushButton_clicked()
     else
     {
 
-       QMessageBox::information(this, "Login failed", "Username or Password is wrong, Please try again");
-}
+       QMessageBox::warning(this, "Login failed", "Username or Password is wrong, Please try again");
+       attempt++;
+    }
+    }
+    else{
+    ui->pushButton->setDisabled(1);
+    }
 }
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>679</width>
-    <height>356</height>
+    <width>462</width>
+    <height>324</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>679</width>
+     <width>462</width>
      <height>22</height>
     </rect>
    </property>
@@ -66,9 +66,17 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
     </property>
     <addaction name="actionAbout_Notepad"/>
    </widget>
+   <widget class="QMenu" name="menuLogout">
+    <property name="title">
+     <string>Logout</string>
+    </property>
+    <addaction name="actionExit"/>
+    <addaction name="actionLogout"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuAbout"/>
+   <addaction name="menuLogout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -92,6 +100,9 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
    <addaction name="actionRedo"/>
    <addaction name="separator"/>
    <addaction name="actionAbout_Notepad"/>
+   <addaction name="separator"/>
+   <addaction name="actionLogout"/>
+   <addaction name="actionExit"/>
   </widget>
   <action name="actionOpen">
    <property name="icon">
@@ -172,6 +183,24 @@ font: 700 16pt &quot;Ubuntu Mono&quot;;
    </property>
    <property name="text">
     <string>About Notepad</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Icon's/Resource/icons/Exit.jpeg</normaloff>:/Icon's/Resource/icons/Exit.jpeg</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionLogout">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Icon's/Resource/icons/logout.png</normaloff>:/Icon's/Resource/icons/logout.png</iconset>
+   </property>
+   <property name="text">
+    <string>Logout</string>
    </property>
   </action>
  </widget>

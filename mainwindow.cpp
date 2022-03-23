@@ -5,6 +5,8 @@
 #include "QTextStream"
 #include "QDebug"
 #include "QMessageBox"
+#include "dialog.h"
+
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -89,5 +91,29 @@ void MainWindow::on_actionNew_triggered()
 {
     QMessageBox::warning(this,"New file is being opened", "Please save file opening new File");
    // QString file_path = getOpenFileName(this);
+}
+
+
+void MainWindow::on_actionExit_triggered()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Quit", "You sure about exiting application?");
+    if(reply== QMessageBox::Yes){
+        this->close();
+    }
+}
+
+
+void MainWindow::on_actionLogout_triggered()
+{
+    QMessageBox::StandardButton Reply;
+    Reply = QMessageBox::question(this, "Logout", "You sure about logging out application?");
+    if(Reply == QMessageBox::Yes){
+        Dialog *uiagain = new Dialog;
+        this->close();
+        uiagain->show();
+    }
+
+
 }
 
