@@ -17,7 +17,7 @@ void init()
     QTextStream in(&login);
     uname=in.readLine();
     pswd=in.readLine();
-    qDebug()<<uname;
+    //qDebug()<<uname;
     login.close();
 }
 static int attempt=0;

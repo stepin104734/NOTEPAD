@@ -7,7 +7,7 @@
 #include "QMessageBox"
 #include "dialog.h"
 
-QFile current_file("/user/madhu/Desktop/current_file.txt");
+QString current_file_path;
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -31,13 +31,26 @@ void MainWindow::on_actionOpen_triggered()
     ui->textEdit_Notepad->clear();
     QString file_open_path=QFileDialog::getOpenFileName();
     QFile file_open(file_open_path);
+    current_file_path = file_open_path;
     file_open.open(QFile::ReadWrite);
     QTextStream in(&file_open);
     ui->textEdit_Notepad->insertPlainText(in.readAll());
+    file_open.close();
 }
 
 void MainWindow::on_actionSave_triggered()
 {
+    if(!(current_file_path == ""))
+    {
+    QFile current_file(current_file_path);
+    QTextStream out(&current_file);
+    current_file.open(QFile::ReadWrite);
+    out<<ui->textEdit_Notepad->toPlainText();
+   // qDebug()<<ui->textEdit_Notepad->toPlainText();
+    current_file.close();
+    }
+    else
+        qDebug()<<"not decided yet";
 
 }
 
