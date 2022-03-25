@@ -7,7 +7,7 @@
 #include "QMessageBox"
 #include "dialog.h"
 
-QString current_file_path;
+QString current_file_path="";
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,6 +28,16 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_actionOpen_triggered()
 {
+   if(!(ui->textEdit_Notepad->toPlainText()== ""))
+   {
+    QMessageBox::StandardButton reply = QMessageBox::question(this, "Open File", "Current file going to save and close, You want to open new file?");
+    if(reply == QMessageBox::Yes)
+    {
+    this->on_actionSave_triggered();
+    }
+    else
+        return;
+   }
     ui->textEdit_Notepad->clear();
     QString file_open_path=QFileDialog::getOpenFileName();
     QFile file_open(file_open_path);
@@ -38,6 +48,7 @@ void MainWindow::on_actionOpen_triggered()
     file_open.close();
 }
 
+
 void MainWindow::on_actionSave_triggered()
 {
     if(!(current_file_path == ""))
@@ -45,18 +56,26 @@ void MainWindow::on_actionSave_triggered()
     QFile current_file(current_file_path);
     QTextStream out(&current_file);
     current_file.open(QFile::ReadWrite);
+    current_file.resize(0);
     out<<ui->textEdit_Notepad->toPlainText();
-   // qDebug()<<ui->textEdit_Notepad->toPlainText();
+    // qDebug()<<ui->textEdit_Notepad->toPlainText();
     current_file.close();
+    QMessageBox::information(this, "Save File", "File saved successfully");
     }
     else
-        qDebug()<<"not decided yet";
+    qDebug()<<"NOT";
+    }
 
-}
 
 
 void MainWindow::on_actionSave_As_triggered()
 {
+    this->on_actionNew_triggered();
+    QFile save_as(current_file_path);
+    save_as.open(QFile::ReadWrite);
+    QTextStream out(&save_as);
+    out<<ui->textEdit_Notepad->toPlainText();
+    save_as.close();
 
 }
 
@@ -100,12 +119,9 @@ void MainWindow::on_actionAbout_Notepad_triggered()
 
 void MainWindow::on_actionNew_triggered()
 {
-    if(!(ui->textEdit_Notepad->toPlainText()==""))
-    QMessageBox::warning(this,"New file is being opened", "Please save file opening new File");
-    QFile file_new("/user/madhu/Desktop/new.txt");
-    file_new.reset();
-
-
+    this->on_actionSave_triggered();
+    QString new_file_path = QFileDialog::getSaveFileName(this, "New File", "Select File name");
+    current_file_path = new_file_path;
 }
 
 

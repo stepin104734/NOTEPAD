@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>401</width>
-    <height>275</height>
+    <width>301</width>
+    <height>191</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,51 +23,29 @@
    <string notr="true">background-color:white;
 </string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>70</x>
+     <x>42</x>
      <y>50</y>
-     <width>219</width>
-     <height>93</height>
+     <width>235</width>
+     <height>87</height>
     </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="maximumSize">
-    <size>
-     <width>219</width>
-     <height>93</height>
-    </size>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
        <widget class="QLabel" name="label">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>69</width>
-          <height>25</height>
-         </size>
-        </property>
         <property name="styleSheet">
-         <string notr="true">background-color:Green;
-color:white;
+         <string notr="true">border: 2px solid black;
+border-color:green;
+background-color:white;
+color:black;
 </string>
         </property>
         <property name="text">
-         <string>Username</string>
+         <string>Username:</string>
         </property>
        </widget>
       </item>
@@ -78,6 +56,12 @@ color:white;
           <horstretch>0</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>140</width>
+          <height>25</height>
+         </size>
         </property>
         <property name="maximumSize">
          <size>
@@ -107,20 +91,15 @@ color:black;
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="maximumSize">
-         <size>
-          <width>69</width>
-          <height>25</height>
-         </size>
-        </property>
         <property name="styleSheet">
-         <string notr="true">background-color:green;
-color:white;
+         <string notr="true">background-color:white;
+color:black;
+border: 2px solid green;
 
 </string>
         </property>
         <property name="text">
-         <string>Password </string>
+         <string>Password :</string>
         </property>
        </widget>
       </item>
@@ -152,7 +131,7 @@ color:black;</string>
       </item>
      </layout>
     </item>
-    <item alignment="Qt::AlignVCenter">
+    <item>
      <widget class="QPushButton" name="pushButton">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
@@ -167,10 +146,10 @@ color:black;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:green;
-color:white;
+       <string notr="true">background-color:white;
+color:black;
 border: 1px solid green;
-border-color:15px;
+
 </string>
       </property>
       <property name="text">
