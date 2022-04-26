@@ -17,6 +17,7 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void enable_login();
 
 private:
     Ui::Dialog *ui;

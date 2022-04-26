@@ -17,6 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->setCentralWidget(ui->textEdit_Notepad);
      this->setWindowTitle("Notepad-Madhu");
     this->showMaximized();
+
 }
 
 

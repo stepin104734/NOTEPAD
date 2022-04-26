@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>301</width>
-    <height>191</height>
+    <width>354</width>
+    <height>213</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -23,7 +23,7 @@
    <string notr="true">background-color:white;
 </string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>42</x>
@@ -158,6 +158,19 @@ border: 1px solid green;
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_loginStatus">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>160</y>
+     <width>351</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
   </widget>
  </widget>
  <resources/>
