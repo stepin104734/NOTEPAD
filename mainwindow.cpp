@@ -71,10 +71,12 @@ void MainWindow::on_actionSave_triggered()
 
 void MainWindow::on_actionSave_As_triggered()
 {
+    QString temp = ui->textEdit_Notepad->toPlainText();
     this->on_actionNew_triggered();
     QFile save_as(current_file_path);
     save_as.open(QFile::ReadWrite);
     QTextStream out(&save_as);
+    ui->textEdit_Notepad->setText(temp);
     out<<ui->textEdit_Notepad->toPlainText();
     save_as.close();
 
@@ -123,6 +125,9 @@ void MainWindow::on_actionNew_triggered()
     this->on_actionSave_triggered();
     QString new_file_path = QFileDialog::getSaveFileName(this, "New File", "Select File name");
     current_file_path = new_file_path;
+    ui->textEdit_Notepad->clear();
+
+
 }
 
 
