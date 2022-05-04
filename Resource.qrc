@@ -12,6 +12,8 @@
         <file>Resource/icons/undo.png</file>
         <file>Resource/icons/logout.png</file>
         <file>Resource/icons/Exit.jpeg</file>
+        <file>Resource/icons/fonts.png</file>
+        <file>Resource/icons/color.png</file>
     </qresource>
     <qresource prefix="/text_files">
         <file>Resource/login.txt</file>

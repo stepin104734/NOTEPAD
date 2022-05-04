@@ -154,3 +154,21 @@ void MainWindow::on_actionLogout_triggered()
 
 }
 
+
+void MainWindow::on_actionFont_triggered()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok, this);
+    qDebug()<< font.family();
+    qDebug()<<ok;
+    ui->textEdit_Notepad->setFont(font);
+}
+
+
+void MainWindow::on_actionColor_triggered()
+{
+    QColor color;
+    color = QColorDialog::getColor();
+    ui->textEdit_Notepad->setTextColor(color);
+}
+

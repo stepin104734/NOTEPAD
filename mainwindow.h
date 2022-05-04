@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QColor>
+#include <QColorDialog>
+#include <QFont>
+#include <QFontDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -39,6 +43,10 @@ private slots:
     void on_actionExit_triggered();
 
     void on_actionLogout_triggered();
+
+    void on_actionFont_triggered();
+
+    void on_actionColor_triggered();
 
 private:
     Ui::MainWindow *ui;
