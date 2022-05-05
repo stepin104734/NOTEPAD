@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>496</width>
+    <width>557</width>
     <height>325</height>
    </rect>
   </property>
@@ -30,6 +30,36 @@ background-color:black;
       </property>
      </widget>
     </item>
+    <item>
+     <widget class="QPushButton" name="m_pb_find">
+      <property name="styleSheet">
+       <string notr="true">background-color:yellow;</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>:/Icon's/Resource/icons/find.jpeg</activeon>
+       </iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="m_le_find">
+      <property name="styleSheet">
+       <string notr="true">background-color:white;
+font: green;
+</string>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>search for keyword</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -37,7 +67,7 @@ background-color:black;
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>496</width>
+     <width>557</width>
      <height>22</height>
     </rect>
    </property>
@@ -64,6 +94,8 @@ background-color:black;
     <addaction name="separator"/>
     <addaction name="actionFont"/>
     <addaction name="actionColor"/>
+    <addaction name="separator"/>
+    <addaction name="actionFind"/>
    </widget>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
@@ -105,11 +137,13 @@ background-color:black;
    <addaction name="actionRedo"/>
    <addaction name="actionFont"/>
    <addaction name="actionColor"/>
+   <addaction name="actionFind"/>
    <addaction name="separator"/>
    <addaction name="actionAbout_Notepad"/>
    <addaction name="separator"/>
    <addaction name="actionLogout"/>
    <addaction name="actionExit"/>
+   <addaction name="separator"/>
   </widget>
   <action name="actionNew">
    <property name="icon">
@@ -226,6 +260,15 @@ background-color:black;
    </property>
    <property name="text">
     <string>Color</string>
+   </property>
+  </action>
+  <action name="actionFind">
+   <property name="icon">
+    <iconset resource="Resource.qrc">
+     <normaloff>:/Icon's/Resource/icons/find.jpeg</normaloff>:/Icon's/Resource/icons/find.jpeg</iconset>
+   </property>
+   <property name="text">
+    <string>Find</string>
    </property>
   </action>
  </widget>

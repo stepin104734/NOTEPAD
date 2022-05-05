@@ -6,6 +6,8 @@
 #include <QColorDialog>
 #include <QFont>
 #include <QFontDialog>
+#include <QLineEdit>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -48,7 +50,14 @@ private slots:
 
     void on_actionColor_triggered();
 
+    void on_m_fontSize_valueChanged(int arg1);
+
+    void on_actionFind_triggered();
+
+    void on_m_pb_find_clicked();
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H

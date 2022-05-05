@@ -6,6 +6,7 @@
 #include "QDebug"
 #include "QMessageBox"
 #include "dialog.h"
+#include "QGridLayout"
 
 QString current_file_path="";
 
@@ -15,10 +16,21 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setCentralWidget(ui->textEdit_Notepad);
-     this->setWindowTitle("Notepad-Madhu");
+    this->setWindowTitle("Notepad-Madhu");
     this->showMaximized();
-    this->statusBar()->addWidget(ui->m_fontSize);
+
+    //for font size
+    ui->toolBar->addWidget(ui->m_fontSize);
     ui->m_fontSize->setValue( ui->textEdit_Notepad->fontInfo().pointSize());
+    //....//
+
+
+    //for text search
+    ui->statusbar->addWidget(ui->m_le_find );
+    ui->statusbar->addWidget(ui->m_pb_find);
+    ui->m_pb_find->hide();
+    ui->m_le_find->hide();
+    //.....//
 }
 
 
@@ -171,5 +183,30 @@ void MainWindow::on_actionColor_triggered()
     QColor color;
     color = QColorDialog::getColor();
     ui->textEdit_Notepad->setTextColor(color);
+}
+
+
+void MainWindow::on_m_fontSize_valueChanged(int arg1)
+{
+    ui->textEdit_Notepad->setFontPointSize(arg1);
+}
+
+
+void MainWindow::on_actionFind_triggered()
+{
+   ui->m_pb_find->show();
+   ui->m_le_find->show();
+}
+
+
+
+
+
+void MainWindow::on_m_pb_find_clicked()
+{
+    ui->textEdit_Notepad->moveCursor(QTextCursor::Start);
+    ui->textEdit_Notepad->find(ui->m_le_find->text());
+    ui->m_pb_find->hide();
+    ui->m_le_find->hide();
 }
 
