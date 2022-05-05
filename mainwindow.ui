@@ -16,6 +16,9 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+     <widget class="QSpinBox" name="m_fontSize"/>
+    </item>
+    <item>
      <widget class="QTextEdit" name="textEdit_Notepad">
       <property name="styleSheet">
        <string notr="true">color:white;
