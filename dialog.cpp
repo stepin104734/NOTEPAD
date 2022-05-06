@@ -41,7 +41,7 @@ Dialog::~Dialog()
 void Dialog::on_pushButton_clicked()
 {
     init();
-    QTimer *timer = new QTimer(this);
+    QTimer *timer = new QTimer(this); //always create it as pointer.
     if(attempt<3)
     {
 
@@ -59,9 +59,11 @@ void Dialog::on_pushButton_clicked()
         }
     }
     else{
-        ui->pushButton->setDisabled(1);ui->pushButton->setStyleSheet("color:red");
+        ui->pushButton->setDisabled(1);
+        ui->pushButton->setStyleSheet("color:red");
 
-        connect(timer, SIGNAL(timeout()), this, SLOT(enable_login())); //connect(ui->pushButton, SIGNAL(1), this, SLOT(disable_login()) ); prototype
+        connect(timer, SIGNAL(timeout()), this, SLOT(enable_login()));
+        timer->setSingleShot(1);//connect(ui->pushButton, SIGNAL(1), this, SLOT(disable_login()) ); prototype
         timer->start(5000); // NOTE: timer repeats every 5secs which is bad for us...
 
         ui->label_loginStatus->setText("");
