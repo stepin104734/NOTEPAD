@@ -15,6 +15,7 @@
         <file>Resource/icons/fonts.png</file>
         <file>Resource/icons/color.png</file>
         <file>Resource/icons/find.jpeg</file>
+        <file>Resource/icons/login.jpeg</file>
     </qresource>
     <qresource prefix="/text_files">
         <file>Resource/login.txt</file>

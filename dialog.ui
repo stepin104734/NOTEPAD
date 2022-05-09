@@ -29,7 +29,7 @@
      <x>42</x>
      <y>50</y>
      <width>235</width>
-     <height>87</height>
+     <height>93</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -146,7 +146,7 @@ color:black;</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:white;
+       <string notr="true">
 color:black;
 border: 1px solid green;
 
@@ -154,6 +154,16 @@ border: 1px solid green;
       </property>
       <property name="text">
        <string>Login</string>
+      </property>
+      <property name="icon">
+       <iconset resource="Resource.qrc">
+        <normaloff>:/Icon's/Resource/icons/login.jpeg</normaloff>:/Icon's/Resource/icons/login.jpeg</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>62</width>
+        <height>21</height>
+       </size>
       </property>
      </widget>
     </item>
@@ -173,6 +183,8 @@ border: 1px solid green;
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resource.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -31,6 +31,7 @@ Dialog::Dialog(QWidget *parent) :
     //ui->statusBar->addWidget(label_loginStatus); // can't add this as Dialog don't have status bar
     ui->label_loginStatus->hide();
 
+
 }
 
 Dialog::~Dialog()
@@ -60,7 +61,8 @@ void Dialog::on_pushButton_clicked()
     }
     else{
         ui->pushButton->setDisabled(1);
-        ui->pushButton->setStyleSheet("color:red");
+        //ui->pushButton->setStyleSheet("color:red");
+        ui->pushButton->setWindowOpacity(qreal(50)/100);
 
         connect(timer, SIGNAL(timeout()), this, SLOT(enable_login()));
         timer->setSingleShot(1);//connect(ui->pushButton, SIGNAL(1), this, SLOT(disable_login()) ); prototype
@@ -71,13 +73,15 @@ void Dialog::on_pushButton_clicked()
         ui->label_loginStatus->setText("Please Wait for 5 secs");
         ui->label_loginStatus->setStyleSheet("color: red;");
 
+
     }
 }
 
 void Dialog::enable_login()
 {
     ui->pushButton->setEnabled(1);
-    ui->pushButton->setStyleSheet("color:black");
+    ui->pushButton->setWindowOpacity(qreal(100)/100);
+    //ui->pushButton->setStyleSheet("color:black");
     ui->label_loginStatus->hide();
     attempt=0;//resetting attempts
 
